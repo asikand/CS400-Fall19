@@ -2,14 +2,13 @@
 const evaluate = s => {
   switch(s.charAt(1)) {
     case "+":
-      //console.log("+")
-      return (left, right) => left + right
+      return (left, right) => parseInt(expression[0]) + parseInt(expression[2])
     case "-":
-      return (left, right) => left - right
+      return (left, right) => parseInt(expression[0]) - parseInt(expression[2])
     case "*":
-      return (left, right) => left * right
+      return (left, right) => parseInt(expression[0]) * parseInt(expression[2])
     case "%":
-      return (left, right) => left % right
+      return (left, right) => parseInt(expression[0]) % parseInt(expression[2])
     default:
       break;
   }
