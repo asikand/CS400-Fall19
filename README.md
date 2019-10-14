@@ -11,7 +11,7 @@
   key/value pair, such as {string: ‘Hey now’}, that is passed into a Pug
   template for rendering.
       
-  A route using the POST method that returns a similar response as b.
+  A route using the POST method that returns a similar response as
   above but gets its parameter from the request body rather than the URL
   string. (To test this from Postman, select POST as the method, then click
   the Body tab. Your input parameter should be an x-www-form-urlencoded
