@@ -28,7 +28,7 @@ router.get('/fixedString', (req, res) => {
 // into a Pug template for rendering.
 router.post('/stringLength', (req, res) => {
 	let input = req.body.inputString
-	let jsonObj = {string: input, length: input.length}
+	let jsonObj = {string: input;, length: input.length}
 	res.status(200).render('stringLength', jsonObj);
 });
 
