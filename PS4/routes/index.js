@@ -6,10 +6,9 @@ const bodyParser = require('body-parser');
 const fetch = require("node-fetch");
 
 // Tell express to use body-parser as middleware
-//router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
-// Root route (required), just displays a welcome message
+// A route using the GET method that retrieves data from an external API
 router.get('/', (req, res) => {
 	// There are 4 pages of starships on the Star Wars API (swapi.co)
 	let randPage = Math.floor(Math.random() * 4) + 1
@@ -28,7 +27,9 @@ router.get('/', (req, res) => {
 				randIndex = Math.floor(Math.random() * count) + 1
 			}
 			let randomShip = json["results"][randIndex]
-			// Render the starship.pug Pug template using the data from the random starship
+			// (Render the starship.pug Pug template using the data from the random starship)
+			// A back-end rendered page to display the results of your call. This can be
+			// EJS, Pug, or any other templating language that you’d like to use.
 			res.status(200).render('starship', randomShip)
 		})
 		// Throw a general server-side error in case something goes wrong

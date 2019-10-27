@@ -2,7 +2,8 @@
 const app = require('express')();
 const routes = require('./routes');
 
-// Mounted on /ps4, uses routes from routes directory
+// An instance of express.Router in a separate route file that is mounted on
+// the path /ps4 (i.e. app.use(‘/ps4’…)).
 app.use('/ps4', routes);
 
 // Set the view engine to Pug
