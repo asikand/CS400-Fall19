@@ -1,12 +1,7 @@
 // Create an instance of an express router
 const router = require('express').Router();
-// Use body parser to parse the body of the request
-const bodyParser = require('body-parser');
 // Use node-fetch library to easily make requests
 const fetch = require("node-fetch");
-
-// Tell express to use body-parser as middleware
-router.use(bodyParser.json());
 
 // A route using the GET method that retrieves data from an external API
 router.get('/', (req, res) => {
