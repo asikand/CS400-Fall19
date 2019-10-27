@@ -1,0 +1,20 @@
+html
+  head
+    title= "Random Star Wars Starship"
+    // Import Fonts
+    link(href="https://fonts.googleapis.com/css?family=Bungee|Staatliches|Titillium+Web&display=swap",rel="stylesheet")
+  style.
+    .centeredHeading { text-align:center;font-family:Bungee;color:#ffffff;position:relative;z-index:2;font-size:48}
+    .centeredInfo { text-align:center;font-family:Staatliches;color:#ffffff;position:relative;z-index:2;font-size:32}
+  style
+    include ./customStyles/stars.css
+
+  // Fixed margin of 120 px
+  body(style="margin-top:120px")
+    div(class="stars")
+    div(class="twinkling")
+    h1(class="centeredHeading")= name
+    h2(class="centeredHeading")= model
+    h2(class="centeredInfo")= "Manufactured by " + manufacturer
+    h2(class="centeredInfo")= "Hyperdrive Rating: " + hyperdrive_rating
+    h2(class="centeredInfo")= "Cost in Credits: " + cost_in_credits
