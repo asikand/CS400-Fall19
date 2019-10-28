@@ -10,6 +10,13 @@ I do not claim ownership to this code
     padding: 0;
 }
 
+.center {
+  border-radius:16px;
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
 @keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}

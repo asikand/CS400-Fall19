@@ -6,26 +6,20 @@ const fetch = require("node-fetch");
 // A route using the GET method that retrieves data from an external API
 router.get('/', (req, res) => {
 	// There are 4 pages of starships on the Star Wars API (swapi.co)
-	let randPage = Math.floor(Math.random() * 4) + 1
+	//let randPage = Math.floor(Math.random() * 4) + 1
 	// Add the random page number to the base URL
-	let url = 'https://swapi.co/api/starships/?page=' + randPage.toString()
+	//let url = 'https://swapi.co/api/starships/?page=' + randPage.toString()
+	let url = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 	// Fetch the data in JSON form from the API
 	// No authentication is required because it is so small
 	fetch(url)// + rand.toString())
 	  .then(res => res.json())
 		.then(json => {
-			// Randomly index into the results
-			let randIndex = Math.floor(Math.random() * json["count"]) + 1
-			// Make sure the result is not undefined ( a lot of broken data in the API )
-			while (json["results"][randIndex] == null) {
-				// If it is null then regenerate the random index
-				randIndex = Math.floor(Math.random() * count) + 1
-			}
-			let randomShip = json["results"][randIndex]
+			console.log(json["drinks"][0])
 			// (Render the starship.pug Pug template using the data from the random starship)
 			// A back-end rendered page to display the results of your call. This can be
 			// EJS, Pug, or any other templating language that you’d like to use.
-			res.status(200).render('starship', randomShip)
+			res.status(200).render('cocktailInfo', json["drinks"][0])
 		})
 		// Throw a general server-side error in case something goes wrong
 	  .catch(err => res.status(500).json());
