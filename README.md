@@ -12,5 +12,8 @@
 2) `npm start` or `node app.js`
 3) Visit `localhost:3000/ps4`
 
+# API
+https://www.thecocktaildb.com/
+
 # Preview
-![alt text](https://drive.google.com/uc?export=download&id=1B-Ta2UmaYYKoqIVKj1XeJV5MOINh-Tng)
+![alt text](https://drive.google.com/uc?export=download&id=1h_mwzzorcu5cW_P_01u3KOlyYSkHtqJc)
