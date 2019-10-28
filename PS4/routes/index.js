@@ -15,11 +15,11 @@ router.get('/', (req, res) => {
 	fetch(url)// + rand.toString())
 	  .then(res => res.json())
 		.then(json => {
-			console.log(json["drinks"][0])
+			let randCocktail = json["drinks"][0]
 			// (Render the starship.pug Pug template using the data from the random starship)
 			// A back-end rendered page to display the results of your call. This can be
 			// EJS, Pug, or any other templating language that you’d like to use.
-			res.status(200).render('cocktailInfo', json["drinks"][0])
+			res.status(200).render('cocktailInfo', cocktail)
 		})
 		// Throw a general server-side error in case something goes wrong
 	  .catch(err => res.status(500).json());
