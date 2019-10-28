@@ -13,4 +13,4 @@
 3) Visit `localhost:3000/ps4`
 
 # Preview
-![alt text](https://drive.google.com/uc?export=download&id=1B-Ta2UmaYYKoqIVKj1XeJV5MOINh-Tng)
+![alt text](https://drive.google.com/file/d/0Bz4YdwRI3rnCMFRoTmtSS0M1VHM/view?usp=sharing)
