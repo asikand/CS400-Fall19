@@ -7,7 +7,7 @@ const routes = require('./routes');
 
 // An instance of express.Router in a separate route file that is mounted on
 // the path /ps4 (i.e. app.use(‘/ps4’…)).
-app.use('/ps4', routes);
+app.use('/ps6', routes);
 
 // Use body-parser as middleware
 app.use(bodyParser.json())
